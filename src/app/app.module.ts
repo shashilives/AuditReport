@@ -6,6 +6,16 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DatatableComponent } from './components/datatable/datatable.component';
 import { ChartsComponent } from './components/charts/charts.component';
+import { MatTableModule, MatSortModule } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+@NgModule({
+  exports: [
+    MatTableModule,
+    MatSortModule
+  ]
+})
+export class DemoMaterialModule { }
 
 @NgModule({
   declarations: [
@@ -13,10 +23,15 @@ import { ChartsComponent } from './components/charts/charts.component';
     NavbarComponent,
     DatatableComponent,
     ChartsComponent
+
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    DemoMaterialModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
