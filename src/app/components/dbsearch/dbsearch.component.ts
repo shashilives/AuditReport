@@ -8,5 +8,5 @@ import { FormControl } from '@angular/forms';
 export class DbsearchComponent {
 
   myControl = new FormControl();
-  options: string[] = ['One', 'Two', 'Three'];
+  options: string[] = ['DB One', 'DB Two', 'DB Three'];
 }
